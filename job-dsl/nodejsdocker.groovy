@@ -14,7 +14,7 @@ job('NodeJS Docker DSL Demo') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('wardviaene/docker-nodejs-demo')
+            repositoryName('fishereatworld2018/nodejs-docker-fisher-17032018')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('fishereatworld2018')
             forcePull(false)
