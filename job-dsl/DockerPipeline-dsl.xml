@@ -1,14 +1,38 @@
-<html><head><meta http-equiv='refresh' content='1;url=/login?from=%2Fjob%2FDocker%2520Pipeline%2520dsl%2Fconfig.xml'/><script>window.location.replace('/login?from=%2Fjob%2FDocker%2520Pipeline%2520dsl%2Fconfig.xml');</script></head><body style='background-color:white; color:white;'>
-
-
-Authentication required
-<!--
-You are authenticated as: anonymous
-Groups that you are in:
-  
-Permission you need to have (but didn't): hudson.model.Hudson.Read
- ... which is implied by: hudson.security.Permission.GenericRead
- ... which is implied by: hudson.model.Hudson.Administer
--->
-
-</body></html>                                                                                                                                                                                                                                                                                                            
+<flow-definition>
+<actions/>
+<description/>
+<keepDependencies>false</keepDependencies>
+<properties/>
+<triggers>...</triggers>
+<definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition">
+<scriptPath>misc/Jenkinsfile.v3</scriptPath>
+<scm class="hudson.plugins.git.GitSCM">
+<userRemoteConfigs>
+<hudson.plugins.git.UserRemoteConfig>
+<url>
+git@github.com:bigfishfastswimer/Udemy-docker-demo.git
+</url>
+</hudson.plugins.git.UserRemoteConfig>
+</userRemoteConfigs>
+<branches>
+<hudson.plugins.git.BranchSpec>
+<name>**</name>
+</hudson.plugins.git.BranchSpec>
+</branches>
+<configVersion>2</configVersion>
+<doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+<gitTool>Default</gitTool>
+<extensions>
+<hudson.plugins.git.extensions.impl.PerBuildTag/>
+</extensions>
+<gitConfigName>DSL User</gitConfigName>
+<gitConfigEmail>fisherhuang1986@gmail.com</gitConfigEmail>
+</scm>
+</definition>
+<logRotator>
+<daysToKeep>2</daysToKeep>
+<numToKeep>4</numToKeep>
+<artifactDaysToKeep>-1</artifactDaysToKeep>
+<artifactNumToKeep>-1</artifactNumToKeep>
+</logRotator>
+</flow-definition>
