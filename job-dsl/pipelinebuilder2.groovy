@@ -1,15 +1,16 @@
-pipelineJob ('DSL Docker Pipeline 2') {
+pipelineJob ('Docker Pipeline dsl') {
   definition {
     cpsScm {
       scm {
-        git ('git@github.com:bigfishfastswimer/Udemy-docker-demo.git'){ node -> //is hudson.plugin.git.Gitscm
-            node / gitConfigName('DSL User')
-            node / gitConfigEmail('fisherhuang1986@gmail.com')
-
+        git {
           remote {
               //github('bigfishfastswimer/Udemy-docker-demo', 'ssh', 'github.com')
+              url("git@github.com:bigfishfastswimer/Udemy-docker-demo.git")
               credentials('Jenkins-UdemyCourse-aws')
           }
+          node -> //is hudson.plugin.git.Gitscm
+              node / gitConfigName('DSL User')
+              node / gitConfigEmail('fisherhuang1986@gmail.com')
           branch("*/**")
         }
       }
