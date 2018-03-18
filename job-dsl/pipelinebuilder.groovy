@@ -2,7 +2,7 @@ pipelineJob ('Docker Pipeline dsl') {
   definition {
     cpsScm {
       scm {
-        git ('git@github.com:bigfishfastswimer/Udemy-docker-demo.git'){
+        git {
           node / gitConfigName('DSL User')
           node / gitConfigEmail('fisherhuang1986@gmail.com')
         //  branch('master')
