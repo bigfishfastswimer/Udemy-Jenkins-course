@@ -15,7 +15,7 @@ pipelineJob ('Docker Pipeline dsl') {
     scm('H/5 * * * *')
   }
   logRotator {
-    daysToKeep('2')
-    numToKeep('4')
+    daysToKeep(2)
+    numToKeep(4)
   }
 }
