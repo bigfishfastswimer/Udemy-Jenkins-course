@@ -6,6 +6,9 @@ pipelineJob ('Docker Pipeline dsl') {
           node / gitConfigName('DSL User')
           node / gitConfigEmail('fisherhuang1986@gmail.com')
         //  branch('master')
+          remote {
+            credentials('Jenkins-UdemyCourse-aws')
+          }
         }
       }
       scriptPath('misc/Jenkinsfile.v3')
