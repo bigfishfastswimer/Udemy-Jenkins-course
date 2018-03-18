@@ -1,4 +1,4 @@
-pipelineJob ('Docker Pipeline dsl') {
+pipelineJob ('Docker Pipeline dsl 2') {
   definition {
     cpsScm {
       scm {
