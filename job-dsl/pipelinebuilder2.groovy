@@ -8,9 +8,10 @@ pipelineJob ('Docker Pipeline dsl 2') {
               url("git@github.com:bigfishfastswimer/Udemy-docker-demo.git")
               credentials('Jenkins-UdemyCourse-aws')
           }
-          node -> //is hudson.plugin.git.Gitscm
+          configure { node -> //is hudson.plugin.git.Gitscm
               node / gitConfigName('DSL User')
               node / gitConfigEmail('fisherhuang1986@gmail.com')
+            }
           branch("*/**")
         }
       }
